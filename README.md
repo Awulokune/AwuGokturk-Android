@@ -2,9 +2,9 @@
 
 ## Ekran Görüntüleri
 
-![Sohbet ekranı](screenshots/sohbet.jpg)
+![Sohbet ekranı](android/screenshots/01_sohbet_bos.png)
 
-![Kod üretimi](screenshots/kod-uretimi.jpg)
+![Kod üretimi](android/screenshots/05_kod_sonuc.png)
 
 Mevcut `awu-gokturk-5k` projesinin üzerine kurulu, **modüler gömülü sistem
 kodlama ajanı**. Arduino Uno, Arduino Mega 2560 ve (klasik) ESP32 için kod üretir,
