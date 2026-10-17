@@ -2,8 +2,6 @@
 
 ## Ekran Görüntüleri
 
-![Ana ekran](screenshots/ana-ekran.png)
-
 ![Sohbet ekranı](screenshots/sohbet.png)
 
 ![Kod üretimi](screenshots/kod-uretimi.png)
