@@ -1,0 +1,1 @@
+Offline, on-device microcontroller coding assistant.

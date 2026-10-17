@@ -1,0 +1,377 @@
+{
+  "toolchain": {
+    "arduino-cli": false,
+    "avr-gcc": false,
+    "platformio": false,
+    "g++": true
+  },
+  "passed": 19,
+  "total": 19,
+  "results": [
+    {
+      "id": "led_on_uno",
+      "prompt": "Arduino Uno'da 7. pindeki LED'i yak.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Uno R3",
+      "modules": [
+        "led_on"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Uno pin 7 korunmali ve kod derlenmeli."
+    },
+    {
+      "id": "neg_pin_reject",
+      "prompt": "Arduino Uno'da -1 numaralı pindeki LED'i yak.",
+      "expected_status": [
+        "error"
+      ],
+      "actual_status": "error",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [
+        [
+          "error",
+          "Gecersiz (negatif) pin: -1"
+        ]
+      ],
+      "questions": [
+        "Gecerli bir pin numarasi belirtin (or. Uno icin 0-13 / A0-A5)."
+      ],
+      "description": "Negatif pin reddedilmeli, varsayilana cevrilmemeli."
+    },
+    {
+      "id": "mega_two_btn",
+      "prompt": "Arduino Mega'da iki butonla iki LED'i kontrol et.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Mega 2560",
+      "modules": [
+        "two_buttons_two_leds"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Mega profili; varsayilan pinler bildirilmeli."
+    },
+    {
+      "id": "esp32_blink",
+      "prompt": "ESP32'de GPIO 18'deki LED'i 500 ms aralıklarla yakıp söndür.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "ESP32 (klasik, ESP32-D0WD/WROOM-32)",
+      "modules": [
+        "led_blink"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Klasik ESP32 varsayimi; GPIO 18 korunmali."
+    },
+    {
+      "id": "esp32_http",
+      "prompt": "ESP32'de Wi-Fi üzerinden HTTP isteği yap.",
+      "expected_status": [
+        "needs_info"
+      ],
+      "actual_status": "needs_info",
+      "passed": true,
+      "board": "ESP32 (klasik, ESP32-D0WD/WROOM-32)",
+      "modules": [
+        "wifi_http_get"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [
+        [
+          "warning",
+          "[HTTP GET istegi (ESP32)] Zorunlu parametre eksik: Istek URL'i (url). Placeholder ile uretildi; lutfen degeri belirtin."
+        ]
+      ],
+      "questions": [
+        "HTTP istegi icin hedef URL belirtilmedi.",
+        "Wi-Fi icin SSID belirtilmedi.",
+        "Wi-Fi icin sifre belirtilmedi."
+      ],
+      "description": "Eksik URL icin soru sorulmali; kod uydurulmamali."
+    },
+    {
+      "id": "a0_no_board",
+      "prompt": "A0 pinindeki potansiyometre değerini seri monitöre yazdır.",
+      "expected_status": [
+        "needs_info"
+      ],
+      "actual_status": "needs_info",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [],
+      "questions": [
+        "Hedef karti belirtir misiniz? Desteklenen kartlar: Arduino Uno R3, Arduino Mega 2560, klasik ESP32. Pin/GPIO ve donanim gereksinimleri karta gore belirlenir."
+      ],
+      "description": "Kart belirtilmedigi icin sorulmali."
+    },
+    {
+      "id": "pin_conflict_ask",
+      "prompt": "Bu kodda pin çakışması var mı?",
+      "expected_status": [
+        "needs_info"
+      ],
+      "actual_status": "needs_info",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [],
+      "questions": [
+        "Hata ayiklanacak kodu ```...``` blogu icinde veya satirlar halinde paylasin.",
+        "Hedef kart nedir? (pin dogrulamasi icin)"
+      ],
+      "description": "Kod verilmedigi icin istenmeli."
+    },
+    {
+      "id": "greeting",
+      "prompt": "Merhaba.",
+      "expected_status": [
+        "greeting"
+      ],
+      "actual_status": "greeting",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [],
+      "questions": [],
+      "description": "Selamlama; yetenekler listelenmeli."
+    },
+    {
+      "id": "unknown_sensor",
+      "prompt": "Bilinmeyen bir sensörü oku.",
+      "expected_status": [
+        "unsupported"
+      ],
+      "actual_status": "unsupported",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [],
+      "questions": [
+        "Sensor/modulun tam adini, veri sayfasini veya kullandigi kutuphaneyi paylasir misiniz?",
+        "Baglanti arayuzu (I2C/SPI/analog/dijital) nedir?"
+      ],
+      "description": "Taninmayan modul icin kod uretilmemeli."
+    },
+    {
+      "id": "uno_pwm",
+      "prompt": "Arduino Uno'da 9. pinde PWM ile LED parlaklığını değiştir.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Uno R3",
+      "modules": [
+        "pwm_fade"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Uno PWM pini."
+    },
+    {
+      "id": "uno_analog",
+      "prompt": "Arduino Uno'da A0 pinindeki potansiyometre değerini seri monitöre yazdır.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Uno R3",
+      "modules": [
+        "analog_read_serial"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Uno analog okuma."
+    },
+    {
+      "id": "mega_pwm_44",
+      "prompt": "Arduino Mega'da 44 numaralı pinde PWM ile LED parlaklığını değiştir.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Mega 2560",
+      "modules": [
+        "pwm_fade"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Mega'ya ozgu PWM pini (Uno'da yok)."
+    },
+    {
+      "id": "mega_analog_a15",
+      "prompt": "Arduino Mega'da A15 pinindeki sensör değerini seri monitöre yazdır.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "Arduino Mega 2560",
+      "modules": [
+        "analog_read_serial"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "Mega A15 (Uno'da yok)."
+    },
+    {
+      "id": "esp32_adc",
+      "prompt": "ESP32'de GPIO 34'teki potansiyometre değerini seri monitöre yazdır.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "ESP32 (klasik, ESP32-D0WD/WROOM-32)",
+      "modules": [
+        "analog_read_serial"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "ESP32 ADC1 (input-only pin)."
+    },
+    {
+      "id": "esp32_pwm",
+      "prompt": "ESP32'de GPIO 18'de PWM ile LED parlaklığını değiştir.",
+      "expected_status": [
+        "ok"
+      ],
+      "actual_status": "ok",
+      "passed": true,
+      "board": "ESP32 (klasik, ESP32-D0WD/WROOM-32)",
+      "modules": [
+        "pwm_fade"
+      ],
+      "build_ok": true,
+      "build_note": "Host sozdizimi dogrulamasi (g++ -fsyntax-only, stub basliklar). GERCEK AVR/ESP32 derlemesi DEGILDIR; arduino-cli/avr-gcc",
+      "guard": [],
+      "questions": [],
+      "description": "ESP32 LEDC PWM."
+    },
+    {
+      "id": "esp32_a0_invalid",
+      "prompt": "ESP32'de A0 pinindeki sensörü oku.",
+      "expected_status": [
+        "error"
+      ],
+      "actual_status": "error",
+      "passed": true,
+      "board": "ESP32 (klasik, ESP32-D0WD/WROOM-32)",
+      "modules": [
+        "analog_read_serial"
+      ],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [
+        [
+          "error",
+          "[Analog okuma -> seri port] Analog giris pini: Gecersiz pin: 'A0' (negatif veya cozumlenemeyen pin)."
+        ]
+      ],
+      "questions": [],
+      "description": "ESP32'de A0 etiketi yok; hata verilmeli."
+    },
+    {
+      "id": "esp32_s3_unsupported",
+      "prompt": "ESP32-S3'te GPIO 5'teki LED'i yak.",
+      "expected_status": [
+        "unsupported"
+      ],
+      "actual_status": "unsupported",
+      "passed": true,
+      "board": null,
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [],
+      "questions": [],
+      "description": "Desteklenmeyen varyant."
+    },
+    {
+      "id": "mega_wifi_refused",
+      "prompt": "Arduino Mega'da Wi-Fi ile HTTP isteği yap.",
+      "expected_status": [
+        "error"
+      ],
+      "actual_status": "error",
+      "passed": true,
+      "board": "Arduino Mega 2560",
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [
+        [
+          "error",
+          "Arduino Mega 2560 Wi-Fi donanimina sahip DEGILDIR; Wi-Fi/HTTP gorevleri yalnizca ESP32'de desteklenir. Kart degistirilmedi (Arduino Mega 2560)."
+        ]
+      ],
+      "questions": [],
+      "description": "Mega'da Wi-Fi yok; kod uretilmemeli."
+    },
+    {
+      "id": "debug_conflict",
+      "prompt": "Arduino Uno'da bu kodda pin çakışması var mı?\n```\nvoid setup(){ pinMode(7, OUTPUT); digitalRead(7); }\n```",
+      "expected_status": [
+        "info"
+      ],
+      "actual_status": "info",
+      "passed": true,
+      "board": "Arduino Uno R3",
+      "modules": [],
+      "build_ok": null,
+      "build_note": "",
+      "guard": [
+        [
+          "error",
+          "Pin 7 OUTPUT tanimli ama okuma icin kullaniliyor."
+        ]
+      ],
+      "questions": [],
+      "description": "Mevcut kodda hata bulma."
+    }
+  ]
+}

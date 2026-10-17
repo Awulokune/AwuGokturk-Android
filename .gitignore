@@ -1,0 +1,35 @@
+# Android / Gradle
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
+captures/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+secrets/
+credentials/
+
+# Temporary data and checkpoints
+*.tmp
+*.log
+*.pt
+*.pth
+*.ckpt
+
+# OS files
+.DS_Store
+Thumbs.db

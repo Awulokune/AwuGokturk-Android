@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AwuGöktürk — çevrimdışı gömülü kodlama asistanı.
+
+  AĞ KULLANIMI (dürüstlük): Sohbet ve kod üretimi tamamen çevrimdışıdır; mesaj
+  veya kod hiçbir sunucuya gönderilmez. INTERNET izni YALNIZCA isteğe bağlı
+  "model güncellemesi" özelliği içindir (GitHub Releases: sürüm kontrolü ve
+  kullanıcı onayıyla indirme). Hedef adresler uygulama içinde izin listesiyle
+  sınırlandırılmıştır (yalnızca github.com/Awulokune/AwuGokturk-Android, HTTPS).
+  Analitik, reklam, izleme veya arka plan indirmesi YOKTUR.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AwuGokturk">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.AwuGokturk">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

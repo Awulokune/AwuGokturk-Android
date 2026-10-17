@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Compose tabanlı ana tema; XML tarafı yalnızca pencere arka planı/status bar. -->
+    <style name="Theme.AwuGokturk" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#0B1416</item>
+        <item name="android:statusBarColor">#0B1416</item>
+        <item name="android:navigationBarColor">#0B1416</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

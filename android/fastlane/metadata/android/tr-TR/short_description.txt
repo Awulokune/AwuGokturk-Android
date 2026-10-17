@@ -1,0 +1,1 @@
+Çevrimdışı, cihaz üzerinde çalışan mikrodenetleyici kod asistanı.

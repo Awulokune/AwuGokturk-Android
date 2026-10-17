@@ -1,0 +1,5 @@
+1.0.0 — İlk sürüm.
+• Çevrimdışı sohbet ve Arduino/ESP32 kod üretimi
+• APK içine gömülü 5K modeli (internetsiz çalışır)
+• Türkçe arayüz, koyu tema
+• İsteğe bağlı model güncellemesi (GitHub Releases, kullanıcı onaylı)

@@ -1,0 +1,5 @@
+1.0.0 — First release.
+• Offline chat and Arduino/ESP32 code generation
+• 5K model bundled in the APK (works without internet)
+• Turkish UI, dark theme
+• Optional model updates (GitHub Releases, user-approved)

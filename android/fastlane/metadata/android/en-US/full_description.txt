@@ -1,0 +1,21 @@
+<b>AwuGöktürk</b> is a fully on-device, offline embedded-systems coding
+assistant. Your messages and code never leave your device: no ads, no
+analytics, no tracking.
+
+<b>Features</b>
+<ul>
+<li>Arduino / ESP32 (C++) code generation via the Chat and Code tabs</li>
+<li>The AwuGöktürk-Microcontroller:5K model is bundled in the APK and works offline</li>
+<li>Pin validation, code safety review (AwuGuard) and code explanation</li>
+<li>Turkish user interface, dark theme</li>
+</ul>
+
+<b>Privacy</b>
+Chat and code generation are fully offline. The INTERNET permission is used
+only for the <b>optional</b> "model update" feature: with your consent it
+checks this project's GitHub Releases and downloads a newer model. It never
+downloads automatically in the background; there is no tracking or analytics.
+
+<b>License</b>
+The app is licensed under GPL-3.0. Source code and model weights are available
+in the project repository.

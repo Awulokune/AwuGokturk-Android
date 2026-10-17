@@ -1,0 +1,68 @@
+# AwuGöktürk — F-Droid build metadata
+# ---------------------------------------------------------------------------
+# Bu dosya, F-Droid'in resmî deposuna (fdroiddata) gönderilmek üzere hazırdır.
+#
+# Nereye konur? (iki seçenek)
+#   1) Resmî F-Droid deposu (önerilen):
+#        fdroiddata/metadata/com.awulokune.awugokturk.yml
+#      ve bir merge request açılır.
+#   2) Kendi kaynağınızda denemek için:
+#        <depo kökü>/.fdroid.yml
+#      (bu projede kökte .fdroid.yml olarak da bırakıldı)
+#
+# ÖNEMLİ: Aşağıdaki `commit:` alanı şu an DOLDURULMAMIŞTIR. Kaynak kod
+# GitHub'a itilip bir sürüm etiketi (tag) oluşturulduktan sonra, o commit'in
+# 40 karakterlik tam SHA'sı yazılmalıdır. Aksi hâlde derleme başarısız olur.
+# ---------------------------------------------------------------------------
+
+Categories:
+  - Development
+License: GPL-3.0-only
+AuthorName: Awulokune
+SourceCode: https://github.com/Awulokune/AwuGokturk-Android
+IssueTracker: https://github.com/Awulokune/AwuGokturk-Android/issues
+
+# Özet ve tam açıklama, kaynak depoda yerelleştirilmiş olarak verilir:
+#   <subdir>/fastlane/metadata/android/tr-TR/...
+#   <subdir>/fastlane/metadata/android/en-US/...
+# F-Droid kuralı: bu dosyadaki Summary/Description, kaynaktaki (fastlane)
+# metinleri EZER. Bu yüzden buraya YAZILMAZ; aksi hâlde Türkçe metin kaybolur.
+
+RepoType: git
+Repo: https://github.com/Awulokune/AwuGokturk-Android.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    # >>> DOLDURULACAK: kaynağın itildiği commit'in tam SHA'sı <<<
+    commit: BURAYA_TAM_COMMIT_SHA_YAZILACAK
+    # Gradle kök projesi depo kökünün altındadır:
+    subdir: android
+    gradle:
+      - yes
+    # APK 'app' modülünde üretildiği için yolu açıkça belirtmek ZORUNLUDUR
+    # (fdroidserver varsayılan olarak build/outputs/apk/release arar).
+    output: app/build/outputs/apk/release/AwuGokturk-release.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1
+
+MaintainerNotes: |
+  Kaynak: https://github.com/Awulokune/AwuGokturk-Android (subdir: android)
+
+  Uygulama, Python ajanını cihazda çalıştırmak için Chaquopy 16.0.0 kullanır.
+  Chaquopy, derleme makinesindeki Python'un "magic number"ını hedef sürümle
+  karşılaştırır ve uyuşmazsa derlemeyi durdurur (chaquopy/pyc.py).
+  Hedef sürüm 3.13'tür (magic 3571); F-Droid derleme sunucusu Debian trixie
+  (python3.13) ile UYUMLUDUR. (3.11 hedefi trixie'de python3.11 bulunmadığı
+  için derlenemiyordu; 3.13'e yükseltilerek çözüldü.)
+
+  Ayrıca Gradle sürümü gradle/wrapper/gradle-wrapper.properties dosyasından
+  okunur (AGP 8.5.2 -> Gradle 8.7); bu dosya depoda bulunmalıdır.
+
+  APK, 'assets/classifier5k.json' içindeki 5K model ağırlıklarını barındırır;
+  bu dosya tools/export_classifier5k.py ile deterministik olarak üretilir
+  (kaynak: experiments_v2/exp_B_classification/model.pt). İnternet izni yalnızca
+  isteğe bağlı, kullanıcı onaylı model güncellemesi içindir; reklam/izleme yoktur.

@@ -1,0 +1,25 @@
+{
+  "note": "Ornek/tohum veri seti. EGITIM YAPILMADI. Beklenen alanlar mevcut ajanin donmus ciktisidir.",
+  "total": 35,
+  "splits": {
+    "train": 16,
+    "validation": 10,
+    "test": 9
+  },
+  "categories": {
+    "code_generation_valid": 13,
+    "invalid_pin": 6,
+    "missing_info": 4,
+    "unsupported_module": 1,
+    "unsupported_board": 4,
+    "debug": 2,
+    "concept": 4,
+    "greeting": 1
+  },
+  "leakage": [],
+  "toolchain": {
+    "arduino_cli": false,
+    "avr_gcc": false,
+    "gpp_host_syntax": true
+  }
+}

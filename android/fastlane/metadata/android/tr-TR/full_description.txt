@@ -1,0 +1,21 @@
+<b>AwuGöktürk</b>, tamamen cihaz üzerinde çalışan, çevrimdışı bir gömülü
+sistem kodlama asistanıdır. Mesajlarınız ve kodunuz hiçbir sunucuya
+gönderilmez; reklam, analitik veya izleme yoktur.
+
+<b>Özellikler</b>
+<ul>
+<li>Sohbet ve Kod sekmeleriyle Arduino / ESP32 (C++) kod üretimi</li>
+<li>AwuGöktürk-Microcontroller:5K modeli APK içine gömülüdür; internet olmadan çalışır</li>
+<li>Pin doğrulama, kod güvenlik denetimi (AwuGuard) ve kod açıklaması</li>
+<li>Türkçe arayüz, koyu tema</li>
+</ul>
+
+<b>Gizlilik</b>
+Sohbet ve kod üretimi tamamen çevrimdışıdır. INTERNET izni yalnızca
+<b>isteğe bağlı</b> "model güncellemesi" özelliği içindir: sizin onayınızla
+yalnızca bu projenin GitHub Releases adresi kontrol edilir ve yeni model
+sürümü indirilir. Arka planda otomatik indirme yapılmaz; izleme/analitik yoktur.
+
+<b>Lisans</b>
+Uygulama GPL-3.0 ile lisanslanmıştır. Kaynak kodu ve model ağırlıkları proje
+deposunda bulunur.

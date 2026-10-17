@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AwuGöktürk — marka renkleri.
+  awu_logo_background: kaynak görselden ÖRNEKLENEN arka plan rengi (#D94A25).
+  Değer uydurulmadı; tools/make_icons.py ile görselin köşe piksellerinden alındı.
+-->
+<resources>
+    <color name="awu_logo_background">#D94A25</color>
+    <color name="awu_window_background">#0A1114</color>
+</resources>
