@@ -1,6 +1,14 @@
 # AwuGöktürk Embedded Agent AI
 
-Mevcut `awu-gokturk-coder-5k` projesinin üzerine kurulu, **modüler gömülü sistem
+## Ekran Görüntüleri
+
+![Ana ekran](screenshots/ana-ekran.png)
+
+![Sohbet ekranı](screenshots/sohbet.png)
+
+![Kod üretimi](screenshots/kod-uretimi.png)
+
+Mevcut `awu-gokturk-5k` projesinin üzerine kurulu, **modüler gömülü sistem
 kodlama ajanı**. Arduino Uno, Arduino Mega 2560 ve (klasik) ESP32 için kod üretir,
 üretilen kodu denetler ve emin olmadığında **tahmin etmek yerine sorar / dürüstçe
 reddeder**.
